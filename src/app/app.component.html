@@ -1,0 +1,9 @@
+<router-outlet></router-outlet>
+
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let word of words" cdkDrag>{{ word.word }}</div>
+</div>
+
+<input (keyup)="onKey($event)" (keypress)="keyPress($event)">
+
+<p>{{values}}</p>
